@@ -2,8 +2,8 @@ export class Instructor {
     name: string;
     role: string;
 
-    //@ts-ignore
-    constructor({name, role = "assistant"} = {}) {
+    // Default values for destructuring
+    constructor({name, role = "assistant"} = {name: "", role: ""}) {
         this.name = name;
         this.role = role;
     }
