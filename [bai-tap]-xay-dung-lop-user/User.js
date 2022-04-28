@@ -8,15 +8,45 @@ var Role;
 })(Role = exports.Role || (exports.Role = {}));
 var User = /** @class */ (function () {
     function User(name, email, role) {
-        this.name = name;
-        this.email = email;
-        this.role = role;
+        this._name = name;
+        this._email = email;
+        this._role = role;
     }
+    Object.defineProperty(User.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "email", {
+        get: function () {
+            return this._email;
+        },
+        set: function (value) {
+            this._email = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "role", {
+        get: function () {
+            return this._role;
+        },
+        set: function (value) {
+            this._role = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
     User.prototype.getInfo = function () {
-        return "Name: ".concat(this.name, " \nEmail: ").concat(this.email, " \nRole: ").concat(this.role);
+        return "Name: ".concat(this._name, " \nEmail: ").concat(this._email, " \nRole: ").concat(this._role);
     };
     User.prototype.isAdmin = function () {
-        if (this.role === 1) {
+        if (this._role === 1) {
             console.log("Admin");
             return true;
         }
