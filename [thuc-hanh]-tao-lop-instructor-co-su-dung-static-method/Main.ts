@@ -1,7 +1,7 @@
 import {Instructor} from "./Instructor";
 
-let juniorInstructor = new Instructor({'name': 'Brian'});
-let seniorInstructor = new Instructor({'name': 'Alice', "role": "classroom"});
+let juniorInstructor = new Instructor({name: 'Brian'});
+let seniorInstructor = new Instructor({name: 'Alice', role: "classroom"});
 
 juniorInstructor.renderDetails(); // "Brian - assistant"
 seniorInstructor.renderDetails(); // "Alice - classroom"

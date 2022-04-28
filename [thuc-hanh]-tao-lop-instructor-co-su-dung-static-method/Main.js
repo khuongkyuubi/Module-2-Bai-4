@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Instructor_1 = require("./Instructor");
-var juniorInstructor = new Instructor_1.Instructor({ 'name': 'Brian' });
-var seniorInstructor = new Instructor_1.Instructor({ 'name': 'Alice', "role": "classroom" });
+var juniorInstructor = new Instructor_1.Instructor({ name: 'Brian' });
+var seniorInstructor = new Instructor_1.Instructor({ name: 'Alice', role: "classroom" });
 juniorInstructor.renderDetails(); // "Brian - assistant"
 seniorInstructor.renderDetails(); // "Alice - classroom"
 Instructor_1.Instructor.helloWorld(); // "Hi there"
